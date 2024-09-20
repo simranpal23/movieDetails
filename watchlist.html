@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WatchList</title>
+    <style>
+        /* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(11, 5, 5);
+    padding: 20px;
+    color: white;
+}
+span {
+    color: orange;
+    font-weight: bold;
+}
+
+header {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin-bottom: 20px;
+}
+
+nav {
+    display: flex;
+}
+
+nav a, nav button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    margin-left: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.movie-card {
+    
+    background-color: rgb(17, 6, 6);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.movie-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.movie-card img {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.hidden {
+    display: none;
+}
+
+.details-section {
+    padding: 20px;
+    background-color: rgb(246, 238, 238);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    font-size: 16px;
+}
+button {
+    background-color: rgb(241, 164, 21); ;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 5px;
+
+}
+button:hover {
+    background-color: rgb(146, 109, 39);
+}
+/* Add this to your style.css */
+.movie-card {
+    background-color: black;
+    color:#fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 300px; /* Set a maximum width for the card */
+    margin: 0 auto; /*Center the card if it's the only one */
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .search-section {
+        flex-direction: column;
+    }
+
+    .search-section input, .search-section button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    #movieGrid, #watchlistGrid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 5px;
+    }
+
+    .movie-card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    .search-section {
+        padding: 10px;
+    }
+
+    .search-section input, .search-section button {
+        font-size: 14px;
+    }
+
+    .movie-card h3 {
+        font-size: 16px;
+    }
+
+    .movie-card p {
+        font-size: 12px;
+    }
+
+    .movie-card button {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1><span>My</span>Watch<span>List</span></h1>
+        <button id="backToSearchButton">Back to Search</button>
+    </header>
+
+    <section id="watchlistGrid" class="grid-container">
+        <!-- Watchlist movies will be dynamically inserted here -->
+    </section>
+    
+    <script src="watchlist.js"></script>
+</body>
+</html>

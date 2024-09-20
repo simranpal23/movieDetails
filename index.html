@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema Scope</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Cinema <span>Scope</span></h1>
+        <nav>
+            <a href="watchlist.html" id="watchlistButton">
+            <button id="watchlistButton">WatchList</button></a>
+        </nav>
+    </header>
+    <section class="search-section">
+        <input type="text" id="searchInput" placeholder="Search for movies...">
+        <button id="searchButton">Search</button>
+    </section>
+
+    <section id="movieGrid" class="grid-container">
+        <!-- Movies will be dynamically inserted here -->
+    </section>
+
+<section id="movieDetails" class="details-section hidden">
+        <!--      Movie details will be shown here   -->
+    </section>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
